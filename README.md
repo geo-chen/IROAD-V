@@ -19,7 +19,7 @@ b) There's a separate set of credentials for port 9092 (stream) that is exposed 
 
 c) For settings, it's "adim" + "000000"
 
-## Finding 3: Bypassing of Device Pairing [CWE-798] for IROAD X Series
+## Finding 3: Bypassing of Device Pairing [CWE-798] for IROAD V Series
 The IROAD v9 dashcam uses MAC address verification as the sole mechanism for recognizing paired devices, allowing attackers to bypass authentication. By capturing the MAC address of an already-paired device through ARP scanning or other means, an attacker can spoof the MAC address and connect to the dashcam without going through the pairing process. This enables full access to the device.
 
 ## Finding 4: Remotely Dump Video Footage and Live Video Stream
