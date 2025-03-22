@@ -37,8 +37,46 @@ The IROAD V dashcams uses an unregistered public domain name as internal domain,
 ![image](https://github.com/user-attachments/assets/43458854-9dab-432e-8505-ff9cb285d169)
 
 
-## Finding 7 - CVE-2025-30108: Exposed FTP Admin
+## Finding 7 - CVE-2025-30108: Exposed FTP Administrator Credentials
 IROAD APK 5.2.5 contains hardcoded, plaintext credentials that provide admin access to a publicly
 accessible FTP server, dvrdns.net, exposing non-public firmware, Google Map API keys, and other potentially-sensitive information.
+
+**Vulnerability Type**: Incorrect Access Control
+
+**Vendor of Product**: IROAD
+
+**Affected Product Code Base**: IROAD APK v5.2.5
+
+**Affected Component**: Exposed FTP Administrator Credentials
+
+**Attack Type**: Remote
+
+**Impact Code execution**: False
+
+**Impact Information Disclosure**: True
+
+**Attack Vectors**: An attacker can log in as "administrator" onto a FTP server hosting dashcam firmware.
+
+**Has vendor confirmed or acknowledged the vulnerability?**: No
+
+Truncated screenshot:
+
+<img width="294" alt="image" src="https://github.com/user-attachments/assets/d7db90c9-0ab3-40a1-9dff-7195475bf5bc" />
+<br/>
+
+<img width="390" alt="image" src="https://github.com/user-attachments/assets/d2805b83-711b-438a-9c52-2d88bdde2c6b" />
+<br/>
+
+<img width="311" alt="image" src="https://github.com/user-attachments/assets/bf7f6fc0-a3db-4c73-858b-3f1ee51e412b" />
+
+## Disclosure Timeline
+
+11 Feb 2025 - Disclosed to IROAD
+
+15 Feb 2025 - Follow-up email sent to IROAD
+
+1 Mar 2025 - Final follow-up email sent
+
+14 Mar 2025 - Public disclosure via CVEs
 
 
