@@ -39,7 +39,7 @@ The IROAD Q dashcams uses an unregistered public domain name as internal domain,
 
 
 ## Finding 7 - CVE-2025-30108: Exposed FTP Administrator Credentials
-IROAD APK 5.2.5 contains hardcoded, plaintext credentials that provide admin access to a publicly
+**Description**: IROAD APK 5.2.5 contains hardcoded, plaintext credentials that provide admin access to a publicly
 accessible FTP server, dvrdns.net, exposing non-public firmware, Google Map API keys, and other potentially-sensitive information.
 
 **Vulnerability Type**: Incorrect Access Control
@@ -71,15 +71,33 @@ Truncated screenshot:
 <img width="311" alt="image" src="https://github.com/user-attachments/assets/bf7f6fc0-a3db-4c73-858b-3f1ee51e412b" />
 
 ## Finding 8 - MFA Spam to Induce Device-Pairing Fatigue
-The IROAD Q Series dashcams, which have fixed default wifi passwords, are vulnerable to device-pairing fatigue attacks because of a lack of rate limiting on the device-pairing process.
+**Description**: The IROAD Q Series dashcams, which have fixed default wifi passwords, are vulnerable to device-pairing fatigue attacks because of a lack of rate limiting on the device-pairing process.
 
 An attacker connected to the network can flood the dashcam with pairing requests, repeatedly trigging device-pairing voice messages and inducing MFA fatigue. This can pressure users into pressing the "Wi-Fi" button, granting the attacker full access for unauthorized control or data extraction. Currently, there are no known ways to disable or restrict this device-pairing process.
 
-In the POC script below, the device-pairing request was replayed 5 times over a short window, with each replay triggering 3 voice messages broadcasting "Press the WiFi button to register the smartphone".
+In the POC screenshot below, the device-pairing request was replayed 5 times over a short window, with each replay triggering 3 voice messages broadcasting "Press the WiFi button to register the smartphone".
 This is then replayed indefinitely until the owner presses the wifi button.
 
 ![image](https://github.com/user-attachments/assets/dc8144ed-0608-48c0-a0ae-a1bbdfad8393)
 
+
+**Vulnerability Type**: Other - Lack of rate controls leading to MFA fatigue
+
+**Vendor of Product**: IROAD
+
+Affected Product Code Base: Q9
+
+Affected Component: Device-pairing mechanism
+
+Attack Type: Remote
+
+Impact Code execution: True
+
+Impact Information Disclosure: True
+
+Attack Vectors: An attacker can spam device-pairing voice messages at a high frequency, without encountering any rate limits, until MFA fatigue sets in and dashcam owner presses the wifi pairing button to give the attacker full dashcam access.
+
+Has vendor confirmed or acknowledged the vulnerability?: No
 
 ## Disclosure Timeline
 
