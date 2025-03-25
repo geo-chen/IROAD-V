@@ -73,7 +73,7 @@ Truncated screenshot:
 ## Finding 8 - MFA Spam to Induce Device-Pairing Fatigue
 **Description**: The IROAD Q Series dashcams, which have fixed default wifi passwords, are vulnerable to device-pairing fatigue attacks because of a lack of rate limiting on the device-pairing process.
 
-An attacker connected to the network can flood the dashcam with pairing requests, repeatedly trigging device-pairing voice messages and inducing MFA fatigue. This can pressure users into pressing the "Wi-Fi" button, granting the attacker full access for unauthorized control or data extraction. Currently, there are no known ways to disable or restrict this device-pairing process.
+An attacker connected to the network can flood the dashcam with pairing requests, repeatedly trigging device-pairing voice messages and inducing MFA fatigue. This can pressure users into pressing the "Wi-Fi" button, granting the attacker full access for unauthorized control or data extraction. 
 
 In the POC screenshot below, the device-pairing request was replayed 5 times over a short window, with each replay triggering 3 voice messages broadcasting "Press the WiFi button to register the smartphone".
 This is then replayed indefinitely until the owner presses the wifi button.
